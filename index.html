@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="포스기, 카드단말기, 키오스크, 테이블오더, CCTV, 인터넷, 정수기 설치 상담. 신규 매장 오픈부터 기존 매장 교체까지 상담 가능합니다.">
+<title>매장 설치 원스톱 상담 | 010-9621-8833</title>
+<style>
+:root{
+  --blue:#0757d8; --deep:#052b66; --sky:#eef7ff; --ink:#111827; --muted:#667085;
+  --line:#dfe7ef; --white:#fff; --yellow:#ffd84d; --red:#ef4444; --radius:24px;
+  --shadow:0 14px 36px rgba(8,45,92,.10);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit} img{display:block;width:100%;height:auto}
+.container{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #edf1f5}
+.header-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:950;color:var(--deep);font-size:20px}.logo b{color:var(--blue)}
+.nav{display:flex;gap:20px;color:#475467;font-size:14px}
+.call-top{background:var(--blue);color:#fff;font-weight:900;padding:11px 16px;border-radius:999px}
+.hero{padding:84px 0 66px;background:radial-gradient(circle at 82% 20%,rgba(0,102,255,.18),transparent 30%),linear-gradient(135deg,#eef8ff,#fff 60%,#edf5ff)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+.badge{display:inline-flex;background:#e6f0ff;color:var(--blue);padding:7px 11px;border-radius:999px;font-size:13px;font-weight:900}
+h1{font-size:clamp(40px,6vw,70px);line-height:1.06;letter-spacing:-2.7px;color:var(--deep);margin:18px 0 20px}
+h1 span{color:var(--red)}
+.hero p{font-size:18px;color:#475467;margin:0 0 26px;max-width:670px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 21px;border-radius:14px;font-weight:950}
+.btn-primary{background:var(--blue);color:#fff}.btn-ghost{border:1px solid #ccd8e5;background:#fff;color:var(--deep)}
+.hero-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#fff;padding:14px;border-radius:28px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.hero-gallery img{aspect-ratio:1.22/1;object-fit:cover;border-radius:16px}
+.hero-gallery img:first-child{grid-column:1/3;aspect-ratio:2.2/1}
+.quick{padding:20px 0;border-bottom:1px solid #eef2f6}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;font-weight:850;color:#344054}
+.quick-grid span{display:block;color:var(--blue);font-size:24px}
+section{padding:78px 0}
+.section-head{max-width:760px;margin-bottom:34px}.kicker{font-size:13px;color:var(--blue);font-weight:950}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.15;letter-spacing:-1.5px;margin:8px 0 12px;color:var(--deep)}
+.section-head p{margin:0;color:var(--muted);font-size:17px}
+.why{background:#f8fbff}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 24px rgba(8,45,92,.05)}
+.card .num{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#e8f1ff;color:var(--blue);font-weight:950;margin-bottom:12px}
+.card h3{margin:0 0 8px;color:var(--deep);font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(8,45,92,.06)}
+.product img{aspect-ratio:4/3;object-fit:cover;background:#f3f6f9}
+.product-copy{padding:18px}.tag{display:inline-block;background:#edf4ff;color:var(--blue);border-radius:999px;padding:5px 8px;font-size:12px;font-weight:900;margin-bottom:8px}
+.product h3{margin:0 0 7px;color:var(--deep);font-size:20px}.product p{margin:0;color:var(--muted);font-size:14px}
+.bundle{background:linear-gradient(135deg,#062a62,#0b5edf);color:#fff}
+.bundle h2,.bundle .section-head p,.bundle .kicker{color:#fff}
+.bundle-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bundle-box{background:#fff;color:var(--ink);padding:26px;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,.13)}
+.bundle-box h3{margin:0 0 14px;color:var(--deep);font-size:25px}
+.bundle-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bundle-list div{background:#f5f7fa;padding:12px 13px;border-radius:12px;font-weight:850}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:#f8fbff;border-top:4px solid var(--blue);border-radius:16px;padding:20px}
+.step b{color:var(--blue)}.step h3{margin:5px 0 7px;color:var(--deep)}.step p{margin:0;color:var(--muted);font-size:14px}
+.install{background:#f7f7f9}
+.install-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.install-grid img{aspect-ratio:4/3;object-fit:cover;border-radius:16px;background:#fff;border:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;color:var(--deep);font-weight:900;font-size:18px}details p{color:var(--muted);margin:10px 0 0}
+.cta{background:linear-gradient(135deg,#eff7ff,#dfeeff)}
+.cta-box{background:#fff;border:1px solid #d5e2f2;border-radius:28px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:var(--shadow)}
+.cta-box h2{margin:0 0 10px}.cta-box p{margin:0;color:var(--muted)}
+.cta-phone{font-size:clamp(28px,4vw,46px);font-weight:950;color:var(--blue);white-space:nowrap}
+footer{background:#071d3c;color:#d7e2f3;padding:30px 0 88px;font-size:13px}
+.floating{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;gap:9px}
+.floating a{min-height:52px;padding:0 17px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:950;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.sms{background:var(--yellow)}.tel{background:var(--blue);color:#fff}
+@media(max-width:900px){.nav{display:none}.hero-grid,.bundle-grid{grid-template-columns:1fr}.why-grid,.products-grid,.process-grid,.install-grid{grid-template-columns:1fr 1fr}.hero{padding-top:54px}.cta-box{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.container{width:min(100% - 24px,1120px)}.header-inner{height:62px}.logo{font-size:16px}.call-top{font-size:13px;padding:9px 12px}h1{font-size:42px;letter-spacing:-1.8px}.hero p{font-size:16px}section{padding:58px 0}.quick-grid{grid-template-columns:1fr 1fr}.why-grid,.products-grid,.process-grid,.install-grid{grid-template-columns:1fr 1fr}.bundle-list{grid-template-columns:1fr}.cta-box{padding:26px 20px}.floating{left:12px;right:12px;bottom:12px}.floating a{flex:1;padding:0 8px}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">매장설치 <b>원스톱 상담</b></div>
+    <nav class="nav">
+      <a href="#why">업체 선정</a>
+      <a href="#products">설치 품목</a>
+      <a href="#process">진행 과정</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="call-top" href="tel:01096218833">010-9621-8833</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">포스기 · 카드단말기 · 키오스크 · 테이블오더</span>
+      <h1>매장 오픈 준비,<br><span>장비부터 설치까지</span><br>한 번에.</h1>
+      <p>무조건 많은 장비보다 내 매장에 맞는 구성이 중요합니다. 업종, 매장 규모, 운영 방식에 맞춰 필요한 품목부터 설치까지 상담해드립니다.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:01096218833">전화 상담 010-9621-8833</a>
+        <a class="btn btn-ghost" href="#products">설치 품목 보기</a>
+      </div>
+    </div>
+    <div class="hero-gallery">
+      <img src="images/installation/pos-card-installation-01.jpg" alt="포스기 카드단말기 설치 사례">
+      <img src="images/kiosk/kiosk-installation-01.jpg" alt="키오스크 설치 사례">
+      <img src="images/table-order/table-order-installation-02.jpg" alt="테이블오더 설치 사례">
+    </div>
+  </div>
+</section>
+
+<div class="quick">
+  <div class="container quick-grid">
+    <div><span>✓</span>매장 맞춤 구성</div>
+    <div><span>✓</span>설치·세팅 지원</div>
+    <div><span>✓</span>사용 방법 안내</div>
+    <div><span>✓</span>사후 문의 대응</div>
+  </div>
+</div>
+
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">WHY</span>
+      <h2>매장 장비는 업체 선정이 중요합니다</h2>
+      <p>포스기와 카드단말기는 단순히 제품만 구매하는 것이 아니라 실제 영업 환경에 맞게 연결되고 관리되어야 합니다.</p>
+    </div>
+    <div class="why-grid">
+      <div class="card"><div class="num">01</div><h3>결제 환경 구성</h3><p>카드 결제, 영수증, 포스 프로그램이 매장 흐름에 맞게 연결되어야 합니다.</p></div>
+      <div class="card"><div class="num">02</div><h3>장비 호환 확인</h3><p>포스, 단말기, 프린터, 키오스크 등 장비 간 호환성을 먼저 확인합니다.</p></div>
+      <div class="card"><div class="num">03</div><h3>초기 사용 안내</h3><p>설치 후 실제 매장에서 바로 사용할 수 있도록 기본 사용 방법을 안내합니다.</p></div>
+      <div class="card"><div class="num">04</div><h3>사후 문의 창구</h3><p>영업 중 발생할 수 있는 문의에 대응할 수 있는 업체인지 확인하는 것이 중요합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">PRODUCTS</span>
+      <h2>필요한 장비만 골라서 구성하세요</h2>
+      <p>신규 매장부터 기존 장비 교체까지 매장 상황에 맞춰 필요한 품목을 선택할 수 있습니다.</p>
+    </div>
+    <div class="products-grid">
+      <article class="product"><img src="images/pos/pos-terminal-01.jpg" alt="포스기"><div class="product-copy"><span class="tag">POS</span><h3>포스기</h3><p>주문, 결제, 매출 관리에 필요한 기본 매장 시스템입니다.</p></div></article>
+      <article class="product"><img src="images/card-terminal/card-terminals-01.jpg" alt="카드단말기"><div class="product-copy"><span class="tag">유선·무선</span><h3>카드단말기</h3><p>매장 환경과 사용 방식에 따라 적합한 단말기를 선택합니다.</p></div></article>
+      <article class="product"><img src="images/kiosk/standing-kiosk-01.jpg" alt="키오스크"><div class="product-copy"><span class="tag">무인 주문</span><h3>키오스크</h3><p>공간과 동선을 고려해 매장에 맞는 형태로 구성합니다.</p></div></article>
+      <article class="product"><img src="images/table-order/table-order-device-01.jpg" alt="테이블오더"><div class="product-copy"><span class="tag">테이블 주문</span><h3>테이블오더</h3><p>테이블에서 메뉴 확인과 주문이 가능하도록 구성합니다.</p></div></article>
+      <article class="product"><img src="images/serving-robot/serving-robot-01.jpg" alt="서빙로봇"><div class="product-copy"><span class="tag">매장 자동화</span><h3>서빙로봇</h3><p>반복적인 이동 업무를 줄이는 데 도움을 줄 수 있습니다.</p></div></article>
+      <article class="product"><img src="images/cctv/cctv-dome-camera-01.jpg" alt="CCTV"><div class="product-copy"><span class="tag">보안</span><h3>CCTV</h3><p>매장 동선과 사각지점을 고려해 설치 위치를 상담합니다.</p></div></article>
+      <article class="product"><img src="images/internet/internet-carriers-01.jpg" alt="인터넷 설치"><div class="product-copy"><span class="tag">통신</span><h3>인터넷</h3><p>포스와 키오스크 운영에 필요한 네트워크 환경을 준비합니다.</p></div></article>
+      <article class="product"><img src="images/water-purifier/water-purifier-01.jpg" alt="정수기"><div class="product-copy"><span class="tag">매장 편의</span><h3>정수기</h3><p>매장 운영에 필요한 편의 설비도 함께 상담할 수 있습니다.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="bundle">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">PACKAGE</span>
+      <h2>기본 세트부터 신규 매장 전체 구성까지</h2>
+      <p>필요한 품목과 예산을 기준으로 구성 범위를 정할 수 있습니다.</p>
+    </div>
+    <div class="bundle-grid">
+      <div class="bundle-box">
+        <h3>기본 POS 구성</h3>
+        <div class="bundle-list"><div>POS 본체</div><div>카드단말기</div><div>키보드·마우스</div><div>영수증 프린터</div><div>주방 프린터</div><div>네트워크 장비</div></div>
+      </div>
+      <div class="bundle-box">
+        <h3>신규 매장 원스톱</h3>
+        <div class="bundle-list"><div>포스기</div><div>카드단말기</div><div>키오스크</div><div>테이블오더</div><div>CCTV</div><div>인터넷·정수기</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">PROCESS</span>
+      <h2>상담부터 설치까지</h2>
+      <p>복잡하게 알아보지 않아도 매장 상황을 말씀해주시면 필요한 항목부터 정리합니다.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step"><b>STEP 1</b><h3>상담</h3><p>업종, 규모, 오픈 예정일과 필요한 장비를 확인합니다.</p></div>
+      <div class="step"><b>STEP 2</b><h3>구성</h3><p>매장에 필요한 장비와 설치 범위를 정리합니다.</p></div>
+      <div class="step"><b>STEP 3</b><h3>설치·세팅</h3><p>현장 환경에 맞춰 장비 연결과 기본 설정을 진행합니다.</p></div>
+      <div class="step"><b>STEP 4</b><h3>사용 안내</h3><p>실제 영업에서 사용할 수 있도록 주요 기능을 안내합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="install">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">INSTALLATION</span>
+      <h2>실제 설치 이미지</h2>
+      <p>보유한 설치 사진을 활용해 실제 현장 느낌을 확인할 수 있도록 구성했습니다.</p>
+    </div>
+    <div class="install-grid">
+      <img src="images/installation/pos-card-installation-01.jpg" alt="포스 카드단말기 설치">
+      <img src="images/installation/card-terminal-installation-01.jpg" alt="카드단말기 설치">
+      <img src="images/kiosk/kiosk-installation-01.jpg" alt="키오스크 설치">
+      <img src="images/table-order/table-order-installation-03.jpg" alt="테이블오더 설치">
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head"><span class="kicker">FAQ</span><h2>자주 묻는 질문</h2></div>
+    <details><summary>신규 매장은 무엇부터 문의하면 되나요?</summary><p>업종, 오픈 예정일, 매장 규모와 현재 준비된 장비 정도만 알려주시면 됩니다.</p></details>
+    <details><summary>기존 포스기나 카드단말기 교체도 가능한가요?</summary><p>현재 사용 중인 장비와 설치 환경을 확인한 뒤 교체 또는 추가 설치 방향을 상담할 수 있습니다.</p></details>
+    <details><summary>키오스크, 테이블오더, CCTV도 함께 문의할 수 있나요?</summary><p>네. 여러 장비를 한 번에 상담받을 수 있도록 구성했습니다.</p></details>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div><h2>매장 준비 중이신가요?</h2><p>어떤 장비가 필요한지 아직 모르셔도 괜찮습니다. 매장 상황부터 말씀해주세요.</p></div>
+      <a class="cta-phone" href="tel:01096218833">010-9621-8833</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">포스기 · 카드단말기 · 키오스크 · 테이블오더 · CCTV · 인터넷 · 정수기 설치 상담<br>문의 010-9621-8833</div></footer>
+
+<div class="floating">
+  <a class="sms" href="sms:01096218833">문자 문의</a>
+  <a class="tel" href="tel:01096218833">전화 상담</a>
+</div>
+</body>
+</html>
